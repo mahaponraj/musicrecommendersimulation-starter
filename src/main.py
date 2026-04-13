@@ -6,7 +6,7 @@ profiles and four adversarial/edge-case profiles designed to stress-test
 the scoring logic.
 """
 
-from src.recommender import load_songs, recommend_songs
+from recommender import load_songs, recommend_songs
 
 
 # ─────────────────────────────────────────────────────────────────────────────

@@ -2,16 +2,7 @@
 
 ## Project Summary
 
-In this project you will build and explain a small music recommender system.
-
-Your goal is to:
-
-- Represent songs and a user "taste profile" as data
-- Design a scoring rule that turns that data into recommendations
-- Evaluate what your system gets right and wrong
-- Reflect on how this mirrors real world AI recommenders
-
-Replace this paragraph with your own summary of what your version does.
+My version builds a content-based music recommender. It scores songs by matching user preferences for genre, mood, energy, and acoustic taste. It recommends the top 5 songs and explains why.
 
 ---
 
@@ -86,38 +77,25 @@ You can add more tests in `tests/test_recommender.py`.
 
 ## Experiments You Tried
 
-Use this section to document the experiments you ran. For example:
-
-- What happened when you changed the weight on genre from 2.0 to 0.5
-- What happened when you added tempo or valence to the score
-- How did your system behave for different types of users
+I halved the genre weight from 2.0 to 1.0 and doubled energy weight. High-energy songs ranked higher even without genre matches. I tested 7 user profiles. Edge cases showed conflicts between preferences.
 
 ---
 
 ## Limitations and Risks
 
-Summarize some limitations of your recommender.
-
-Examples:
-
-- It only works on a tiny catalog
-- It does not understand lyrics or language
-- It might over favor one genre or mood
-
-You will go deeper on this in your model card.
+It only works on a tiny catalog of 17 songs. It does not understand lyrics or language. It might over favor high-energy songs due to weighting. Dataset has more pop songs, biasing results.
 
 ---
 
 ## Reflection
 
-Read and complete `model_card.md`:
+My biggest learning moment was realizing how small changes in scoring weights can dramatically shift recommendations. When I doubled the energy weight, songs that were energy-close but genre-mismatched suddenly ranked higher, showing how sensitive these systems are to design choices.
 
-[**Model Card**](model_card.md)
+AI tools like Copilot helped me quickly implement functions and generate test data, but I had to double-check the math in scoring formulas and verify that the CSV loading handled data types correctly. The AI suggestions were great for structure, but I needed to ensure the logic matched my algorithm recipe.
 
-Write 1 to 2 paragraphs here about what you learned:
+What surprised me most was how simple rules could still produce recommendations that "felt" right. Even with just genre, mood, and energy matching, the top songs often aligned with what I'd intuitively pick for different user types. It made me appreciate how real recommenders build on these basics with massive data and complex models.
 
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+If I extended this project, I'd try adding collaborative filtering by simulating user-song interaction history, and experiment with diversity algorithms to avoid recommending too many songs from the same artist or genre. I'd also want to test with real user feedback to see if the explanations help people trust the recommendations more.
 
 
 ---
