@@ -33,9 +33,19 @@ Replace this paragraph with your own summary of what your version does.
 
 Real-world music recommenders like Spotify use complex hybrid systems combining collaborative filtering (what similar users liked), content-based matching (song features), and contextual signals (time of day, activity). My version prioritizes simplicity and transparency by focusing purely on content-based matching with interpretable rules, making it easy to understand why songs are recommended without requiring user history or large datasets.
 
-##Output:
+## Output:
 
 ![Output ss](<Screenshot 2026-04-12 175738.png>)
+
+## Each Profile's Recommendation: 
+
+![alt text](<Screenshot 2026-04-12 181409.png>)
+![alt text](<Screenshot 2026-04-12 181418.png>)
+![alt text](<Screenshot 2026-04-12 181426.png>)
+![alt text](<Screenshot 2026-04-12 181436.png>)
+![alt text](<Screenshot 2026-04-12 181446.png>)
+![alt text](<Screenshot 2026-04-12 181459.png>)
+![alt text](<Screenshot 2026-04-12 181509.png>)
 
 ---
 
